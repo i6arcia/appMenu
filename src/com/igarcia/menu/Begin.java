@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -49,16 +51,17 @@ public class Begin extends Activity {
 		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
-		/*list.setOnItemClickListener(new OnItemClickListener() {
+		list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
-				Toast.makeText(Begin.this, "Item:",
+			public void onItemClick(AdapterView <?> arg0, View arg1, int position,
+					long id) {
+				Toast.makeText(Begin.this, "Item:"+position,
 						Toast.LENGTH_SHORT).show();
-				drawerLayout.closeDrawers();
+				mostrarFragmento(position);
+				drawer.closeDrawers();
 			}
-		});*/
+		});
 		
 		//getActionBar().setDisplayHomeAsUpEnabled(true);
 		
@@ -79,9 +82,24 @@ public class Begin extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	/*@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}*/
+	
+	private void mostrarFragmento(int position){
+		switch (position){
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			SharedPreferences conf1 = getSharedPreferences("Usuario", Context.MODE_PRIVATE);
+			SharedPreferences.Editor edit = conf1.edit();
+			edit.putString("Nombre", "");
+			edit.commit();
+			Intent i = new Intent(getApplicationContext(), MainActivity.class);
+			startActivity(i);
+			finish();
+			break;
+		}
+	}
 }
