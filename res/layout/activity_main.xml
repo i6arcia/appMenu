@@ -11,8 +11,8 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/textSub"
         android:layout_marginBottom="30dp"
-        android:text="@string/registro"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="@string/log_registro"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
     
     <TextView
         android:id="@+id/textSub"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/editNombre"
         android:layout_marginLeft="20dp"
-        android:text="@string/nombre"
+        android:text="@string/log_nombre"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
@@ -42,13 +42,13 @@
         android:layout_below="@id/editNombre"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:text="@string/ingresar" />
+        android:text="@string/log_ingresar" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/Restaurant"
+        android:contentDescription="@string/app_name"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/textTitulo"
@@ -61,7 +61,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
-        android:text="@string/assignment"
+        android:text="@string/log_pie"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <requestFocus />

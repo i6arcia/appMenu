@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">	Menu			</string>
-    <string name="hello_world">	Hello world!	</string>
-    <string name="registro">	Registro		</string>
-    <string name="nombre">		Nombre:			</string>
-    <string name="ingresar">	Ingresar		</string>
-    <string name="Restaurant">	Restaurant		</string>
-    <string name="assignment">	Assignment Omnius</string>
+    <string name="app_name">	Restaurant			</string>
+    <string name="log_registro">	Registro		</string>
+    <string name="log_nombre">		Nombre:			</string>
+    <string name="log_ingresar">	Ingresar		</string>
+    <string name="log_pie">			Assignment Omnius</string>
     
-    <!-- Layout BEGIN -->
-    <string name="Bienvenidos"> Bienvenidos		</string>
-    <string name="Cerrar_Sesion">Cerrar Sesión 	</string>
-    
-    <string-array name="panel">
+    <!-- Lista Panel lateral -->
+    <string-array name="panel_options">
         <item>Menu</item>
         <item>Orden</item>
         <item>Acerca de</item>
         <item>Cerrar Sesion</item>
     </string-array>
     
-    <array name="ic_panel">
+    <array name="panel_ic">
         <item>@drawable/ic_menu</item>
         <item>@drawable/ic_orden</item>
         <item>@drawable/ic_about</item>
