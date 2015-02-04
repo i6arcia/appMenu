@@ -3,12 +3,15 @@ package com.igarcia.menu;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -56,13 +59,10 @@ public class Begin extends Activity {
 			@Override
 			public void onItemClick(AdapterView <?> arg0, View arg1, int position,
 					long id) {
-				Toast.makeText(Begin.this, "Item:"+position,
-						Toast.LENGTH_SHORT).show();
 				mostrarFragmento(position);
-				drawer.closeDrawers();
 			}
 		});
-		
+		mostrarFragmento(1);
 		//getActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		SharedPreferences conf = getSharedPreferences("Usuario", Context.MODE_PRIVATE);
@@ -84,8 +84,10 @@ public class Begin extends Activity {
 	}
 	
 	private void mostrarFragmento(int position){
+		Fragment fragment = null;
 		switch (position){
 		case 1:
+			fragment = new FrameExample();
 			break;
 		case 2:
 			break;
@@ -100,6 +102,17 @@ public class Begin extends Activity {
 			startActivity(i);
 			finish();
 			break;
+		}
+		if (fragment != null){
+			FragmentManager fragmentManager = getFragmentManager();
+			fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+			list.setItemChecked(position, true);
+			list.setSelection(position);
+			
+			setTitle(titulos[position-1]);
+			drawer.closeDrawer(list);
+		}else{
+			Log.e("Error", "Al mostrar el fragmento "+ position);
 		}
 	}
 }
