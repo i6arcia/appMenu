@@ -90,7 +90,7 @@ public class Begin extends Activity {
 			fragment = new OptPlatillos();
 			break;
 		case 2:
-			
+			fragment = new OptOrden();
 			break;
 		case 3:
 			fragment = new OptAbout();
