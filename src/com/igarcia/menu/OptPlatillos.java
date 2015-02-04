@@ -6,14 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FrameExample extends Fragment {
+public class OptPlatillos extends Fragment {
 
-	public FrameExample(){}
+	public OptPlatillos(){}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.ejemplo, container, false);
+		View rootView = inflater.inflate(R.layout.opt_platillos, container, false);
 		return rootView;
 	}
 

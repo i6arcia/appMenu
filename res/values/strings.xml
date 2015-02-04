@@ -21,4 +21,11 @@
         <item>@drawable/ic_about</item>
         <item>@drawable/ic_close</item>
     </array>
+    
+    <!-- Opcion Platillos -->
+    <string name="pl_title"> Platillos</string>
+    <!-- Opcion Orden -->
+    <string name="or_title"> Orden</string>
+    <!-- Opcion Acerca de -->
+    <string name="ab_title"> Acerca de...</string>
 </resources>

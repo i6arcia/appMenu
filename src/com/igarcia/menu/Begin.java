@@ -87,11 +87,13 @@ public class Begin extends Activity {
 		Fragment fragment = null;
 		switch (position){
 		case 1:
-			fragment = new FrameExample();
+			fragment = new OptPlatillos();
 			break;
 		case 2:
+			
 			break;
 		case 3:
+			fragment = new OptAbout();
 			break;
 		case 4:
 			SharedPreferences conf1 = getSharedPreferences("Usuario", Context.MODE_PRIVATE);

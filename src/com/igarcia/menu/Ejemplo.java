@@ -8,7 +8,7 @@ public class Ejemplo extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ejemplo);
+		setContentView(R.layout.opt_platillos);
 	}
 
 }
